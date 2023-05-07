@@ -3,17 +3,20 @@ import { Swiper, Pagination, Autoplay } from 'swiper';
 const params = {
     spaceBetween: 20,
     loop: true,
-    Autoplay: {
+    autoplay: {
         delay: 3500,
         disableOnInteraction: false,
     },
     sliderPerView: 1,
-    Pagination: {
-        el: '.swiper-pagination'
+    pagination: {
+        el: '.swiper-pagination',
     },
-    modules: [Autoplay]
-}
+    modules: [Autoplay, Pagination]
+};
 
-export const slidersInit = () => {
-
-}
+export const slidersInit = (selectorSlider, newParams) => {
+    new Swiper(selectorSlider, {
+        ...params,
+        ...newParams
+    })
+};

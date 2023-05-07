@@ -130,3 +130,17 @@ iframe {
     gap: 10px;
   }
 }
+
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 16px;
+  border-color: $second;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 40px;
+  border-color: $back;
+}
