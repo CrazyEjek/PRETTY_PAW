@@ -29,6 +29,13 @@
         );
     }
 
+    // @include xxl {
+    //     background-image: url('/src/img/poster-desktop@1x.jpg');
+    //     background-image: image-set(
+    //     url ('/src/img/poster-desktop@2x.webp') 2x,
+    //     url ('/src/img/poster-desktop@2x.jpg') 2x,
+    //     );
+
     &__container {
         position: relative;
         z-index: 10;
@@ -46,6 +53,9 @@
         @include xl {
             min-height: 780px;
             padding-bottom: 100px;
+        }
+        @include xxl {
+            min-height: 100vh;
         }
     }
     
