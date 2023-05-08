@@ -97,7 +97,7 @@ iframe {
     @include xxl {
       padding-left: 60px;
       padding-right: 60px;  
-      min-width: 2560px;
+      max-width: 2560px;
       margin: 0 auto;
  } 
 } 
@@ -131,16 +131,16 @@ iframe {
   }
 }
 
-
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 16px;
-  border-color: $second;
+  background-color: $second;
   opacity: 1;
+  transition: width .3s ease;
 }
 
 .swiper-pagination-bullet-active {
   width: 40px;
-  border-color: $back;
+  background-color: $back;
 }

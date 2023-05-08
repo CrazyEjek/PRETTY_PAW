@@ -9,7 +9,8 @@
         @include lg {
             // жесткий адаптив на гридах
             display: grid;
-            grid-template-columns: 48% 1fr;
+            // grid-template-columns: 48% 1fr;
+            grid-template-columns: minmax(460px, 660px) 1fr;
             gap: 40px 20px;
             grid-template-areas:
             'title title'
@@ -124,13 +125,21 @@
         }
     }
 
+    &__slider {
+        @include lg {
+            grid-area: slider;
+        }
+    }
+
+
+
     &__picture {
         @include lg {
             grid-area: slider;
         }
     }
     &__image {
-        background-repeat: 16px;
+        border-radius: 16px;
         max-height: 400px;
     }
 }
