@@ -1,0 +1,63 @@
+.location {
+
+
+
+    &__item {
+        position: relative;
+        padding: 50px 16px;
+        min-height: 273px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 5;
+            display: block;
+            bottom: 0;
+            right: 50%;
+            height: 0.5px;
+            width: calc(100% - 32px);
+            border-color: $second;
+            transform: translate(50%, 0.5px);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &_mammals:before {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            url('/src/img/mammals.jpg');
+        }
+
+        &_birds:before {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            url('/src/img/birds.jpg');
+        }
+
+        &_reptiles:before {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            url('/src/img/reptiles.jpg');
+        }
+
+        &_water:before {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            url('/src/img/water.jpg');
+        }
+
+        &_insects:before {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+            url('/src/img/insects.jpg');
+        }
+    }
+
+    &__title {
+    }
+
+    &__description {
+    }
+}

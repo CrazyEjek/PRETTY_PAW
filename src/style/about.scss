@@ -73,8 +73,8 @@
             background-position: center;
         }
 
-        @include lg {
-            margin-bottom: 40px;
+        @include xl {
+            gap: 60px;
         }
     }
 
