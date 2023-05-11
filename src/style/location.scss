@@ -12,10 +12,15 @@
         }
 
         @include xxl {
-            min-height: 100vh;
-            min-width: 2560px;
+            min-height: 780px;
+            max-width: 2560px;
             margin: 0 auto;
         }
+
+        @include xl {
+            max-width: 1600px;
+            margin: 0 auto;
+            }
     }
 
     &__item {

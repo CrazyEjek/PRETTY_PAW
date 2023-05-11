@@ -23,7 +23,7 @@ slidersInit('.career__slider' , {
           768: {
             slidesPerView: 'auto',
             spaceBetween: 20,
-            pagination: false
+            pagination: true
           },
           1024: {
             slidesPerView: 'auto',
@@ -33,6 +33,11 @@ slidersInit('.career__slider' , {
           1240: {
             slidesPerView: 'auto',
             spaceBetween: 30,
+            pagination: false
+          },
+          1600: {
+            slidesPerView: 'auto',
+            spaceBetween: 33,
             pagination: false
           }
         }

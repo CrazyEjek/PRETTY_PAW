@@ -2,6 +2,8 @@
     padding-top: 20px;
     padding-bottom: 30px;
 
+   
+
     &__containeer {
         @include sm {
             display: grid;
@@ -12,6 +14,17 @@
         @include lg {
             gap: 72px;
         }
+
+        @include xl {
+            max-width: 1600px;
+            margin: 0 auto;
+            }
+        
+            @include xxl {
+                max-width: 2560px;
+                margin: 0 auto;
+                }
+        
     }
 
     &__logo {
