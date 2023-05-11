@@ -20,6 +20,11 @@ slidersInit('.career__slider' , {
         el: '.career__slider-pagination',
     },  
         breakpoints: {
+          320: {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            pagination: false
+          },
           768: {
             slidesPerView: 'auto',
             spaceBetween: 20,
@@ -38,6 +43,11 @@ slidersInit('.career__slider' , {
           1600: {
             slidesPerView: 'auto',
             spaceBetween: 33,
+            pagination: false
+          },
+          2500: {
+            slidesPerView: 'auto',
+            spaceBetween: 37,
             pagination: false
           }
         }
