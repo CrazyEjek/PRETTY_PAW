@@ -1,5 +1,14 @@
 .about {
     padding: 80px 0;
+    @include xl {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    
+    @include xxl {
+        max-width: 2560px;
+        margin: 0 auto;
+    }
 
     @include lg {
         padding: 100px 0;
@@ -24,6 +33,17 @@
             'slider title'
             'slider content';
         }
+        // @include xl {
+
+        //     min-width: 1600px;
+        //     margin: 0 auto;
+        // }
+        
+        // @include xxl {
+        //     min-width: 2560px;
+        //     margin: 0 auto;
+        // }
+      
     }
 
     &__title {
@@ -38,8 +58,10 @@
             font-size: 52px;
             grid-area: title;
             margin-bottom: 0;
+            padding: 30px;
         }
     }
+   
 
     &__content {
         margin-bottom: 13px;
@@ -72,11 +94,8 @@
             'link';
             background-position: center;
         }
-
-        @include lg {
-            margin-bottom: 40px;
-        }
     }
+
 
     &__description {
         margin-bottom: 40px;
@@ -114,6 +133,7 @@
         @include lg {
             grid-template-columns: repeat(2, 200px);
         }
+        
     }
 
     &__count {
@@ -130,8 +150,6 @@
             grid-area: slider;
         }
     }
-
-
 
     &__picture {
         @include lg {

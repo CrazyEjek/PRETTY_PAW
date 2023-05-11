@@ -11,6 +11,17 @@
     padding: 30px;
 }
 
+@include xl {
+
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+@include xxl {
+    max-width: 2560px;
+    margin: 0 auto;
+}
+
 
 &__container {
     display: flex;
