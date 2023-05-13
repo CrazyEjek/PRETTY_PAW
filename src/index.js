@@ -16,41 +16,38 @@ slidersInit('.about__slider' , {
 
 
 slidersInit('.career__slider' , {
-    pagination: {
-        el: '.career__slider-pagination',
-    },  
-        breakpoints: {
-          320: {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            pagination: false
-          },
-          768: {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            pagination: true
-          },
-          1024: {
-            slidesPerView: 'auto',
-            spaceBetween: 26,
-            pagination: false
-          },
-          1240: {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
-            pagination: false
-          },
-          1600: {
-            slidesPerView: 'auto',
-            spaceBetween: 33,
-            pagination: false
-          },
-          2500: {
-            slidesPerView: 'auto',
-            spaceBetween: 37,
-            pagination: false
-          }
-        }
+  breakpoints: {
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			slideToClickedSlide: true,
+			pagination: {
+				el: '.career__slider-pagination'
+			},
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: true,
+			},
+		},
+
+		576: {
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+			pagination: false
+		},
+
+		1024: {
+			slidesPerView: 'auto',
+			spaceBetween: 26,
+			pagination: false
+		},
+
+		1280: {
+			slidesPerView: 'auto',
+			spaceBetween: 30,
+			pagination: false
+		}
+	}
 });
 
 const videoBG = document.querySelector('.video-bg');
