@@ -6,6 +6,7 @@
 
         width: 100%;
         padding-top: 16px;
+        padding-left: 30px;
         
         @include sm {
             display: grid;
@@ -16,7 +17,11 @@
         @include lg {
             row-gap: 72px;
         }
-        
+
+        @include xxl {
+            max-width: 2560px;
+            margin: 0 auto;
+        }
     }
 
     &__logo {
@@ -31,14 +36,13 @@
         }
     }
 
-
     &__social-list {
         display: flex;
         gap: 16px;
         margin-bottom: 52px;
 
         @include sm {
-            margin-bottom: 0;
+            margin-bottom: 0px;
         }
 
         @include lg {
@@ -61,6 +65,7 @@
 
     &__developers {
 		margin-bottom: 52px;
+        padding-right: 30px;
 
 		@include sm {
 			margin-bottom: 0px;
@@ -73,6 +78,7 @@
 	}
 
 	&__developer {
+
 		&:not(:last-child) {
 			margin-bottom: 19px;
 		}
@@ -80,7 +86,6 @@
 
 	&__copyright {
 		margin: 0;
-
 	}
 
 	@include lg {

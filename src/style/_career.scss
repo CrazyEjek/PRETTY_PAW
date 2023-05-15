@@ -2,6 +2,7 @@
     overflow-x: hidden;
     padding-top: 80px;
     padding-bottom: 40px;
+    margin: 0 auto;
 
     @include lg {
         padding-top: 100px;
@@ -10,12 +11,10 @@
 
     @include xl {
     max-width: 1600px;
-    margin: 0 auto;
     }
 
     @include xxl {
         max-width: 2560px;
-        margin: 0 auto;
         }
 
     &__content {
@@ -55,6 +54,7 @@
     }
 
     &__description {
+        min-width: 720px;
         margin-bottom: 24px;
 
         @include md {
@@ -80,7 +80,13 @@
         height: unset;
         display: flex;
         align-items: center;
-        
+        @include sm {
+            &:nth-child(odd) {
+                width: 56%;
+            }
+            &:nth-child(even) {
+                width: 40%;
+            }}
 
         @include md {
         &:nth-child(odd) {
@@ -109,6 +115,7 @@
 
     &__image {
         border-radius: 16px;
+        width: 100%;
     }
 }
 

@@ -1,6 +1,9 @@
 .location {
+    position: relative;
 
     &__list {
+        position: relative;
+        z-index: 15;
         @include lg {
             display: flex;
             min-height: 552px;
@@ -73,6 +76,10 @@
             inset: 0;
             background-size: cover;
             background-position: center;
+
+            @include lg {
+                background-image: none;
+            }
         }
 
         &_mammals:before {
@@ -84,12 +91,7 @@
             background-image: 
             url('/src/img/mammals_tablet.webp');
             }
-            @include lg {
-                background-image:  
-            url('/src/img/mammals_laptop.jpg');
-            background-image: 
-            url('/src/img/mammals_laptop.webp');
-            }
+        
         }
 
         &_birds:before {
@@ -102,12 +104,7 @@
             background-image: 
             url('/src/img/birds_tablet.webp');
             }
-            @include lg {
-                background-image:  
-            url('/src/img/birds_laptop.jpg');
-            background-image: 
-            url('/src/img/birds_laptop.webp');
-            }
+            
         }
 
         &_reptiles:before {
@@ -119,12 +116,7 @@
             background-image:  
             url('/src/img/reptiles_tablet.webp');
             }
-            @include lg {
-                background-image:  
-            url('/src/img/reptiles_laptop.jpg');
-            background-image: 
-            url('/src/img/reptiles_laptop.webp');
-            }
+           
         }
 
         &_water:before {
@@ -136,12 +128,7 @@
             background-image: 
             url('/src/img/water_tablet.webp');
             }
-            @include lg {
-                background-image:  
-            url('/src/img/water_laptop.jpg');
-            background-image: 
-            url('/src/img/water_laptop.webp');
-            }
+           
         }
 
         &_insects:before {
@@ -153,12 +140,7 @@
             background-image: 
             url('/src/img/insects_tablet.webp');
             }
-            @include lg {
-                background-image:  
-            url('/src/img/insects_laptop.jpg');
-            background-image: 
-            url('/src/img/insects_laptop.webp');
-            }
+            
         }
     }
 
@@ -190,6 +172,14 @@
 
         @include lg {
             display: none;
+        }
+    }
+
+    &__video-bg {
+        display: none;
+
+        @include lg {
+            display: block;
         }
     }
 }

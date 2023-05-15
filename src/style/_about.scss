@@ -1,5 +1,10 @@
 .about {
     padding: 80px 0;
+
+    @include lg {
+        padding: 100px 0;
+    }
+
     @include xl {
         max-width: 1600px;
         margin: 0 auto;
@@ -8,11 +13,6 @@
     @include xxl {
         max-width: 2560px;
         margin: 0 auto;
-    }
-
-    @include lg {
-        padding: 100px 0;
-
     }
 
     &__container {
@@ -59,42 +59,51 @@
         background-position: center bottom;
         padding-bottom: 27px;
 
-            // тут капец с адаптивом на гридах!!! фишечка
         @include md {
-            display: grid;
-            grid-template-columns: 1fr min-content;
-            grid-template-areas: 
-            'description list'
-            'link list';
-            gap: 24px 92px;
-            background-position: right bottom;
-        }
+			background-position: right bottom;
+			display: grid;
+			grid-template-columns: 1fr min-content;
+			grid-template-areas:
+				'description list'
+				'link .';
+			gap: 24px 92px;
+		}
+        
         @include lg {
+            background-position: center;
+            grid-area: content;
             grid-template-columns: 1fr;
             grid-template-rows: min-content;
             gap: 40px;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            grid-area: content;
             grid-template-areas: 
             'description'
             'list'
             'link';
-            background-position: center;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
+
         @include xl {
             gap: 60px;
         }
+        @include xxl {
+			max-height: 600px;
+			height: min-content;
+		}
     }
 
     &__description {
-        margin-bottom: 40px;
+        margin-bottom: 24px;
+        grid-area: description;
 
-        @include md {
-            grid-area: description;
-            margin-bottom: 0;
-        }
-    }
+		@include md {
+			margin-bottom: 0;
+		}
+
+		@include lg {
+			font-size: 20px;
+		}
+	}
 
     &__link {
         margin-bottom: 40px;
@@ -106,10 +115,15 @@
         @include lg {
             align-self: end;
         }
+
+        @include xxl {
+           margin: 0;
+        }
     }
 
     &__count-list {
         // использует гриды, посмотреть внимательней!!!
+        grid-area: list;
         display: grid;
         grid-template-columns: repeat(2, 120px);
         gap: 20px;
@@ -117,11 +131,9 @@
         color: $second;    
         line-height: 1;
 
-        @include md {
-            grid-area: list;
-        }
         @include lg {
             grid-template-columns: repeat(2, 200px);
+            gap: 30px;
         }
         
     }
@@ -132,12 +144,12 @@
 
         @include lg {
             font-size: 52px;
+            margin-bottom: 24px;
         }
     }
 
 
     &__picture {
-       
         @include lg {
             grid-area: slider;
         }
@@ -145,11 +157,4 @@
 
     &__image {
         border-radius: 16px;
-
-        @include lg {
-            background-size: cover;
-        }
-        @include xl {
-        } 
-    }
-}
+}}

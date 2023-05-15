@@ -42,7 +42,10 @@
         background-image: image-set(
         url ('/src/img/poster-desktop@2x.webp') 2x,
         url ('/src/img/poster-desktop@2x.jpg') 2x,
-        );}
+        );
+        max-width: 2560px;
+        margin: 0 auto;
+    }
 
     &__container {
         position: relative;
