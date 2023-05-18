@@ -6,7 +6,7 @@
     overflow-y: auto;
     background-color: $main;
     color: $second;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
     height: 100vh;
@@ -52,29 +52,37 @@
 		padding: 0 5px;
 
 		&_active {
-            color: inherit;
-			background-color: $back;
+			color: $back;
 			pointer-events: none;
 		}
 
 		&:focus:not(:hover) {
-			outline: $back;
+			outline-color: $back;
 		}
 
-		@include md {
+		@include lg {
 			&:hover {
 				color: $back;
 			}
+        }
 
         @include xl {
             display: block;
             padding: 16px 30px;
-            border: 2px solid #FFAA05;
+            border: 2px solid $back;
             border-radius: 80px;
-            
-                }
+            outline: none;
+
+            &:focus:note(:hover) {
+                border-color: $back;
             }
+        &_active {
+            color: inherit;
+            pointer-events: none;
+            background-color: $back;
+        }}
 }
+
 
 &__button {
     width: 36px;

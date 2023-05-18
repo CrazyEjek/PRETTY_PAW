@@ -1,23 +1,25 @@
 import './index.html';
-// new modules
+import './page.html';
+// modules
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import './index.scss';
 import { slidersInit } from './modules/sliders';
 import { videobackgrInit } from './modules/videobackgr';
 import { menuControl } from './modules/menuControl';
+import { locationHover } from './modules/locationHover';
 
 
-// use modules
 videobackgrInit ();
+slidersInit ();
 menuControl ();
+locationHover ();
 
 slidersInit('.about__slider' , {
     pagination: {
         el: '.about__slider-pagination',
     }
 });
-
 
 slidersInit('.career__slider' , {
   breakpoints: {

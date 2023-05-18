@@ -73,44 +73,50 @@
     }
 
     &__slider {
-        overflow: visible;
+        @include md {
+            overflow: visible;
+            // overflow: unset;
+        }
+       
     }
 
     &__image-item {
         height: unset;
         display: flex;
         align-items: center;
+
         @include sm {
-            &:nth-child(odd) {
-                width: 56%;
-            }
-            &:nth-child(even) {
-                width: 40%;
-            }}
+                width: 48%;
+            
+            // &_even {
+            //     width: 37%;
+            // }
+        }
 
         @include md {
-        &:nth-child(odd) {
+        &_odd {
             width: 34%;
         }
-        &:nth-child(even) {
+        &_even {
             width: 25%;
         }}
 
         @include xl {
-            &:nth-child(odd) {
                 width: 27%;
-            }
-            &:nth-child(even) {
-                width: 20%;
-            }}
+            
+            // &_even {
+            //     width: 20%;
+            // }
+        }
 
             @include xxl {
-                &:nth-child(odd) {
+                
                     width: 22%;
-                }
-                &:nth-child(even) {
-                    width: 17%;
-                }}
+                
+                // &_even {
+                //     width: 17%;
+                // }
+            }
     }
 
     &__image {
