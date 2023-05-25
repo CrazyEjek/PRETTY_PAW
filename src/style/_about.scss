@@ -33,6 +33,12 @@
             'slider title'
             'slider content';
         }
+
+        @include xxl {
+            min-height: 780px;
+            max-width: 2560px;
+            margin: 0 auto;
+        }
     }
 
     &__title {
@@ -157,4 +163,9 @@
 
     &__image {
         border-radius: 16px;
+        height: 406px;
+
+        @include lg {
+            height: 580px;
+        }
 }}

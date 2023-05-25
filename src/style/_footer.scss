@@ -84,6 +84,22 @@
 		}
 	}
 
+    &__developer-link {
+        color: $main;
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        border-radius: 3px;
+        transition: color .3 ease-in-out;
+
+        &:focus:not(:hover) {
+            outline-color: $second;
+        }
+
+        &:hover {
+            color: $second;
+        }
+    }
+
 	&__copyright {
 		margin: 0;
 	}

@@ -88,9 +88,9 @@
         @include sm {
                 width: 48%;
             
-            // &_even {
-            //     width: 37%;
-            // }
+            &_even {
+                width: 37%;
+            }
         }
 
         @include md {
@@ -104,18 +104,18 @@
         @include xl {
                 width: 27%;
             
-            // &_even {
-            //     width: 20%;
-            // }
+            &_even {
+                width: 20%;
+            }
         }
 
             @include xxl {
                 
                     width: 22%;
                 
-                // &_even {
-                //     width: 17%;
-                // }
+                &_even {
+                    width: 17%;
+                }
             }
     }
 
